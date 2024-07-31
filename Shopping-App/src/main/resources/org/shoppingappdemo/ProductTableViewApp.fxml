@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.shoppingappdemo.BrowseProducts.ProductTableViewAppController">
+    <TableView fx:id="tableView" style="-fx-background-color: #F0F7F4;">
+        <columns>
+            <TableColumn prefWidth="150" text="Product Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="productName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="200" text="Short Description">
+                <cellValueFactory>
+                    <PropertyValueFactory property="shortDescription" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="100" text="Price">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <!-- Add other UI elements as needed -->
+</VBox>

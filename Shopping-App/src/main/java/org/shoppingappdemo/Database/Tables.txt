@@ -1,0 +1,91 @@
+CREATE TABLE users(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phoneNo VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    product_name VARCHAR(255) NOT NULL,
+    short_description TEXT,
+    price DOUBLE NOT NULL,
+    quantity INT NOT NULL
+);
+
+
+-- Inserting sample data for burgers
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Classic Burger', 'Delicious beef burger with lettuce and tomato', 8.99, 50);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Cheeseburger', 'Classic burger with melted cheese', 9.99, 40);
+
+-- Inserting sample data for sushi
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Salmon Nigiri', 'Fresh salmon on a bed of rice', 12.99, 30);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('California Roll', 'Crab, avocado, and cucumber roll', 14.99, 25);
+
+-- Inserting sample data for sandwiches
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Turkey Club Sandwich', 'Triple-decker sandwich with turkey, bacon, and lettuce', 11.99, 35);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Vegetarian Panini', 'Grilled vegetable panini with mozzarella', 10.99, 30);
+
+-- Inserting sample data for juice
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Orange Juice', 'Freshly squeezed orange juice', 4.99, 60);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Apple Juice', 'Crisp and refreshing apple juice', 3.99, 75);
+
+-- Inserting sample data for milkshakes
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Chocolate Milkshake', 'Creamy chocolate shake with whipped cream', 6.99, 50);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Strawberry Milkshake', 'Sweet strawberry shake with a cherry on top', 7.99, 45);
+
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('BBQ Bacon Burger', 'Delicious beef burger with BBQ sauce and bacon', 10.99, 25);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Spicy Chicken Sandwich', 'Spicy grilled chicken sandwich with lettuce and mayo', 9.99, 20);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Dragon Roll', 'Shrimp tempura, avocado, and eel sauce', 16.99, 18);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Turkey Avocado Wrap', 'Turkey, avocado, and ranch dressing in a wrap', 8.99, 22);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Pineapple Juice', 'Refreshing pineapple juice with ice', 5.99, 40);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Mango Tango Smoothie', 'Mango and banana smoothie with a hint of lime', 7.49, 35);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Vanilla Milkshake', 'Classic vanilla shake with whipped cream', 6.49, 30);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Blueberry Pancake Milkshake', 'Blueberry pancake flavored shake', 8.99, 28);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Veggie Delight Wrap', 'Fresh vegetable wrap with hummus', 7.99, 25);
+
+INSERT INTO products (product_name, short_description, price, quantity)
+VALUES ('Crispy Chicken Burger', 'Crispy fried chicken with lettuce and pickles', 11.49, 20);
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    total_price DOUBLE NOT NULL,
+    products_ordered VARCHAR(500) NOT NULL,
+    statusOfPackage VARCHAR(20) NOT NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
